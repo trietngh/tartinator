@@ -1,0 +1,11 @@
+# VSCode files
+.vscode
+
+#Build files
+build/
+
+#Install files
+install/
+
+#Logs
+log/

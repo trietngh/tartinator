@@ -1,0 +1,985 @@
+<?xml version="1.0" ?>
+<robot name="tartinator_noencoder" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find tartinator_noencoder_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find tartinator_noencoder_description)/urdf/tartinator_noencoder.trans" />
+<xacro:include filename="$(find tartinator_noencoder_description)/urdf/tartinator_noencoder.gazebo" />
+
+<link name="base_link">
+</link>
+
+<link name="base">
+  <inertial>
+    <origin xyz="0.020100000000000017 0.10879999999998086 1.6249248159358388e-15" rpy="0 0 0"/>
+    <mass value="0.08458971943251423"/>
+    <inertia ixx="0.00072" iyy="0.000198" izz="0.000523" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_7">
+  <inertial>
+    <origin xyz="-0.005431296008595168 0.0056687066755743976 0.004999996250139985" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0186 -0.2388 0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_7.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0186 -0.2388 0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_7.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_8">
+  <inertial>
+    <origin xyz="0.23186870399140486 0.1542687066755744 0.14499999625013998" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2187 -0.0902 0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_8.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2187 -0.0902 0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_8.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MUR_2">
+  <inertial>
+    <origin xyz="0.08546978359187204 -0.06044999999999989 0.057499999999974065" rpy="0 0 0"/>
+    <mass value="0.1545223214885139"/>
+    <inertia ixx="0.000605" iyy="0.001811" izz="0.001207" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2313 -0.31185 0.0575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MUR_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2313 -0.31185 0.0575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MUR_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MUR_1">
+  <inertial>
+    <origin xyz="0.08546978359187204 0.06045000000000005 -0.06749999999997404" rpy="0 0 0"/>
+    <mass value="0.1545223214885139"/>
+    <inertia ixx="0.000605" iyy="0.001811" izz="0.001207" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2313 0.09425 -0.0675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2313 0.09425 -0.0675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROULEUR_1">
+  <inertial>
+    <origin xyz="0.007740619444043837 8.326672684688674e-17 1.752764600126966e-14" rpy="0 0 0"/>
+    <mass value="0.008176271675834882"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0186 -0.2388 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0186 -0.2388 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROULEUR_2">
+  <inertial>
+    <origin xyz="-0.014959380555956168 -0.1113999999999999 -0.17999999999998242" rpy="0 0 0"/>
+    <mass value="0.008176271675834882"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0413 -0.0902 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0413 -0.0902 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROULEUR_3">
+  <inertial>
+    <origin xyz="-0.01495938055595615 -0.1113999999999999 0.18000000000001753" rpy="0 0 0"/>
+    <mass value="0.008176271675834882"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0413 -0.0902 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0413 -0.0902 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROULEUR_4">
+  <inertial>
+    <origin xyz="0.24504061944404387 0.1486000000000001 0.18000000000001753" rpy="0 0 0"/>
+    <mass value="0.008176271675834882"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2187 -0.0902 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2187 -0.0902 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROULEUR_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="AJUSTEUR_1">
+  <inertial>
+    <origin xyz="-0.002299999999999993 0.05360000000000005 -0.019499999999998744" rpy="0 0 0"/>
+    <mass value="0.031016346714125155"/>
+    <inertia ixx="6.8e-05" iyy="5e-06" izz="6.2e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0186 -0.0552 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/AJUSTEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0186 -0.0552 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/AJUSTEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MOTEUR_RE280_1">
+  <inertial>
+    <origin xyz="-0.020306444300990194 -0.00730006479165668 -0.019500000000007203" rpy="0 0 0"/>
+    <mass value="0.4751614351527999"/>
+    <inertia ixx="0.000281" iyy="7.9e-05" izz="0.000284" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.014 -0.1624 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MOTEUR_RE280_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.014 -0.1624 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MOTEUR_RE280_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RENFORCEUR_1">
+  <inertial>
+    <origin xyz="-0.01319222141965296 -0.01949822796162179 -0.019500000000056323" rpy="0 0 0"/>
+    <mass value="0.013085957096988645"/>
+    <inertia ixx="5e-06" iyy="5e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0131 -0.1624 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/RENFORCEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0131 -0.1624 -0.0195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/RENFORCEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_9">
+  <inertial>
+    <origin xyz="-0.028131296008595163 -0.11706870667557423 0.15500000374985998" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0413 -0.0902 0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_9.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0413 -0.0902 0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_9.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MOTEUR_RE280_2">
+  <inertial>
+    <origin xyz="0.0325935556990098 -0.06579993520834332 0.0140000000000072" rpy="0 0 0"/>
+    <mass value="0.4751614351527999"/>
+    <inertia ixx="0.000281" iyy="7.9e-05" izz="0.000284" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0389 -0.1283 0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MOTEUR_RE280_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0389 -0.1283 0.014" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MOTEUR_RE280_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="COQUEMOTEUR_1">
+  <inertial>
+    <origin xyz="-0.04190305185643914 -0.079950790474755 0.04997596338264226" rpy="0 0 0"/>
+    <mass value="0.13710891584726362"/>
+    <inertia ixx="0.000871" iyy="0.000166" izz="0.000824" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0186 -0.1888 0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/COQUEMOTEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0186 -0.1888 0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/COQUEMOTEUR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ETAGIERE_1">
+  <inertial>
+    <origin xyz="-0.001499999999999925 -0.12008310563598368 0.005162909907198497" rpy="0 0 0"/>
+    <mass value="0.12533443516666082"/>
+    <inertia ixx="0.001191" iyy="0.000308" izz="0.000883" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0436 -0.2288 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ETAGIERE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0436 -0.2288 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ETAGIERE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_DEMI_6">
+  <inertial>
+    <origin xyz="0.24554412968677047 0.0922558698513466 -0.16392357538952462" rpy="0 0 0"/>
+    <mass value="0.035376134311278645"/>
+    <inertia ixx="1e-05" iyy="1e-05" izz="2e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2839 -0.1524 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2839 -0.1524 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_5">
+  <inertial>
+    <origin xyz="0.2457312933244257 0.09206870399140485 0.17499999625014" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2839 -0.1524 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2839 -0.1524 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_6">
+  <inertial>
+    <origin xyz="-0.014268703991404796 -0.17926870667557426 0.17499999625014" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0239 -0.1524 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0239 -0.1524 0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ETAGIEREHAUT_1">
+  <inertial>
+    <origin xyz="-0.0014999999999998626 0.14459999999994302 -0.07499999999999794" rpy="0 0 0"/>
+    <mass value="0.13473900671605235"/>
+    <inertia ixx="0.001425" iyy="0.000497" izz="0.000928" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2336 0.0353 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ETAGIEREHAUT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2336 0.0353 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ETAGIEREHAUT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="TOIT_1">
+  <inertial>
+    <origin xyz="0.0015000000000000013 0.14109999999997497 -0.07203884705466876" rpy="0 0 0"/>
+    <mass value="0.12786286232457442"/>
+    <inertia ixx="0.001537" iyy="0.000513" izz="0.001024" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2971 0.0323 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/TOIT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2971 0.0323 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/TOIT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_DEMI_4">
+  <inertial>
+    <origin xyz="0.00524412968677046 0.005855869851346604 -0.013923575389524708" rpy="0 0 0"/>
+    <mass value="0.035376134311278645"/>
+    <inertia ixx="1e-05" iyy="1e-05" izz="2e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2941 -0.0488 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2941 -0.0488 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_DEMI_5">
+  <inertial>
+    <origin xyz="-0.1620558703132294 -0.23995586985134634 0.013923575389524712" rpy="0 0 0"/>
+    <mass value="0.035376134311278645"/>
+    <inertia ixx="1e-05" iyy="1e-05" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1268 -0.4029 0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1268 -0.4029 0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_DEMI_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_3">
+  <inertial>
+    <origin xyz="-0.09186870399140476 -0.30909999625013984 -0.005668706675574349" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1968 -0.4029 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1968 -0.4029 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EQUERRE_4">
+  <inertial>
+    <origin xyz="-0.12186870399140476 -0.27909999625013987 -0.005668706675574328" rpy="0 0 0"/>
+    <mass value="0.021866191266104597"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1668 -0.4029 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1668 -0.4029 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/EQUERRE_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BATTERIE_1">
+  <inertial>
+    <origin xyz="-0.02499999999999994 9.71445146547012e-17 -0.04999999999999994" rpy="0 0 0"/>
+    <mass value="6.320999999999999"/>
+    <inertia ixx="0.028497" iyy="0.006584" izz="0.024547" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0466 -0.1088 -0.0642" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/BATTERIE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0466 -0.1088 -0.0642" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/BATTERIE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROUE_RIGHT_1">
+  <inertial>
+    <origin xyz="6.048957476204017e-11 0.014937101615337067 0.0001994198193547407" rpy="0 0 0"/>
+    <mass value="0.36488416435780135"/>
+    <inertia ixx="8.2e-05" iyy="0.000129" izz="8.4e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.2026 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROUE_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.2026 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROUE_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PNEU_RIGHT_1">
+  <inertial>
+    <origin xyz="-1.3241126420114455e-15 -0.013250000000000234 -9.124049749754245e-18" rpy="0 0 0"/>
+    <mass value="0.2445300334258709"/>
+    <inertia ixx="0.000114" iyy="0.000202" izz="0.000114" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.23085 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/PNEU_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.23085 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/PNEU_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MURLIDAR_v1_1">
+  <inertial>
+    <origin xyz="-0.03896726479344048 0.0015000000000001262 0.0070642825717627256" rpy="0 0 0"/>
+    <mass value="0.10472248191911718"/>
+    <inertia ixx="6.1e-05" iyy="0.000208" izz="0.000147" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.283 -0.0599 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MURLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.283 -0.0599 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MURLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MURLIDAR_v1_2">
+  <inertial>
+    <origin xyz="-0.08776726479344035 0.040450000000000194 0.30606428257176277" rpy="0 0 0"/>
+    <mass value="0.10472248191911718"/>
+    <inertia ixx="6.1e-05" iyy="0.000208" izz="0.000147" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2342 -0.11575 0.319" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MURLIDAR_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2342 -0.11575 0.319" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/MURLIDAR_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FONTLIDAR_v1_1">
+  <inertial>
+    <origin xyz="0.0013580104396149206 0.045899999999994445 -0.0014999999999999493" rpy="0 0 0"/>
+    <mass value="0.22524586783497147"/>
+    <inertia ixx="0.000173" iyy="0.000207" izz="0.000379" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.323 -0.0629 -0.0189" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/FONTLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.323 -0.0629 -0.0189" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/FONTLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BASELIDAR_v1_1">
+  <inertial>
+    <origin xyz="0.0015000000000000013 0.04889999999999627 0.010247212167280279" rpy="0 0 0"/>
+    <mass value="0.1803214688625476"/>
+    <inertia ixx="0.000236" iyy="0.000103" izz="0.000134" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2719 -0.0599 0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/BASELIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2719 -0.0599 0.035" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/BASELIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="TOITLIDAR_v1_1">
+  <inertial>
+    <origin xyz="-0.00150000000000039 4.440892098500626e-16 -0.043521376207477876" rpy="0 0 0"/>
+    <mass value="0.17924795366609306"/>
+    <inertia ixx="0.000235" iyy="0.000102" izz="0.000133" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.3741 -0.1088 -0.0189" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/TOITLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.3741 -0.1088 -0.0189" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/TOITLIDAR_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="R325-URG-04LX-UG01_v1_1">
+  <inertial>
+    <origin xyz="-0.03160139346446028 -0.020070682968072934 -0.01990943958963791" rpy="0 0 0"/>
+    <mass value="1.1170076799759243"/>
+    <inertia ixx="0.000384" iyy="0.000629" izz="0.000628" ixy="2e-06" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2719 -0.1288 0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/R325-URG-04LX-UG01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2719 -0.1288 0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/R325-URG-04LX-UG01_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ROUE_LEFT_1">
+  <inertial>
+    <origin xyz="0.20960000006049026 -0.02493710161533701 -0.0001994198193547407" rpy="0 0 0"/>
+    <mass value="0.36488416435780135"/>
+    <inertia ixx="8.2e-05" iyy="0.000129" izz="8.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROUE_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/ROUE_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="PNEU_LEFT_1">
+  <inertial>
+    <origin xyz="9.124049749754295e-18 0.013250000000000005 2.737214924926292e-17" rpy="0 0 0"/>
+    <mass value="0.2445300334258709"/>
+    <inertia ixx="0.000114" iyy="0.000202" izz="0.000114" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.01325 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/PNEU_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.01325 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find tartinator_noencoder_description)/meshes/PNEU_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 0" type="fixed">
+  <origin xyz="0 0 0" rpy="0 1.57 0"/>
+  <parent link="base_link"/>
+  <child link="base"/>
+</joint>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="0.0186 0.2388 -0.07" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="EQUERRE_7"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="-0.2187 0.0902 -0.07" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="EQUERRE_8"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="-0.2499 0.07305 0.0125" rpy="0 0 0"/>
+  <parent link="EQUERRE_7"/>
+  <child link="MUR_2"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="-0.2726 -0.18445 0.1475" rpy="0 0 0"/>
+  <parent link="EQUERRE_9"/>
+  <child link="MUR_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.0186 0.2388 -0.09" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="ROULEUR_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.0413 0.0902 0.09" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="ROULEUR_2"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.0413 0.0902 -0.09" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="ROULEUR_3"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.2187 0.0902 -0.09" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="ROULEUR_4"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="0.0186 0.0552 0.0195" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="AJUSTEUR_1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="-0.0046 0.1072 0.0" rpy="0 0 0"/>
+  <parent link="AJUSTEUR_1"/>
+  <child link="MOTEUR_RE280_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="-0.0009 0.0 0.0" rpy="0 0 0"/>
+  <parent link="MOTEUR_RE280_1"/>
+  <child link="RENFORCEUR_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.0413 0.0902 -0.08" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="EQUERRE_9"/>
+</joint>
+
+<joint name="Rigid 27" type="fixed">
+  <origin xyz="-0.0575 0.0731 -0.0335" rpy="0 0 0"/>
+  <parent link="AJUSTEUR_1"/>
+  <child link="MOTEUR_RE280_2"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.0186 0.1888 -0.05" rpy="0 0 0"/>
+  <parent link="base"/>
+  <child link="COQUEMOTEUR_1"/>
+</joint>
+
+<joint name="Rigid 32" type="fixed">
+  <origin xyz="-0.0622 0.04 0.03" rpy="0 0 0"/>
+  <parent link="COQUEMOTEUR_1"/>
+  <child link="ETAGIERE_1"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="-0.2403 -0.0764 0.11" rpy="0 0 0"/>
+  <parent link="ETAGIERE_1"/>
+  <child link="EQUERRE_DEMI_6"/>
+</joint>
+
+<joint name="Rigid 34" type="fixed">
+  <origin xyz="-0.2403 -0.0764 -0.07" rpy="0 0 0"/>
+  <parent link="ETAGIERE_1"/>
+  <child link="EQUERRE_5"/>
+</joint>
+
+<joint name="Rigid 35" type="fixed">
+  <origin xyz="0.0197 -0.0764 -0.07" rpy="0 0 0"/>
+  <parent link="ETAGIERE_1"/>
+  <child link="EQUERRE_6"/>
+</joint>
+
+<joint name="Rigid 36" type="fixed">
+  <origin xyz="-0.0023 0.05895 0.0075" rpy="0 0 0"/>
+  <parent link="MUR_1"/>
+  <child link="ETAGIEREHAUT_1"/>
+</joint>
+
+<joint name="Rigid 37" type="fixed">
+  <origin xyz="-0.0658 0.06195 0.0075" rpy="0 0 0"/>
+  <parent link="MUR_1"/>
+  <child link="TOIT_1"/>
+</joint>
+
+<joint name="Rigid 38" type="fixed">
+  <origin xyz="0.003 0.0811 -0.095" rpy="0 0 0"/>
+  <parent link="TOIT_1"/>
+  <child link="EQUERRE_DEMI_4"/>
+</joint>
+
+<joint name="Rigid 40" type="fixed">
+  <origin xyz="0.1703 0.4352 -0.125" rpy="0 0 0"/>
+  <parent link="TOIT_1"/>
+  <child link="EQUERRE_DEMI_5"/>
+</joint>
+
+<joint name="Rigid 41" type="fixed">
+  <origin xyz="0.1003 0.4352 -0.045" rpy="0 0 0"/>
+  <parent link="TOIT_1"/>
+  <child link="EQUERRE_3"/>
+</joint>
+
+<joint name="Rigid 42" type="fixed">
+  <origin xyz="0.1303 0.4352 -0.045" rpy="0 0 0"/>
+  <parent link="TOIT_1"/>
+  <child link="EQUERRE_4"/>
+</joint>
+
+<joint name="Rigid 43" type="fixed">
+  <origin xyz="-0.003 -0.12 0.0842" rpy="0 0 0"/>
+  <parent link="ETAGIERE_1"/>
+  <child link="BATTERIE_1"/>
+</joint>
+
+<joint name="Revolute 48" type="continuous">
+  <origin xyz="-0.014 0.0402 -0.0195" rpy="0 0 0"/>
+  <parent link="MOTEUR_RE280_1"/>
+  <child link="ROUE_RIGHT_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 49" type="fixed">
+  <origin xyz="-0.0 0.02825 0.0" rpy="0 0 0"/>
+  <parent link="ROUE_RIGHT_1"/>
+  <child link="PNEU_RIGHT_1"/>
+</joint>
+
+<joint name="Rigid 50" type="fixed">
+  <origin xyz="0.0111 0.0111 0.0" rpy="0 0 0"/>
+  <parent link="EQUERRE_DEMI_4"/>
+  <child link="MURLIDAR_v1_1"/>
+</joint>
+
+<joint name="Rigid 51" type="fixed">
+  <origin xyz="-0.1074 -0.28715 -0.269" rpy="0 0 0"/>
+  <parent link="EQUERRE_DEMI_5"/>
+  <child link="MURLIDAR_v1_2"/>
+</joint>
+
+<joint name="Rigid 53" type="fixed">
+  <origin xyz="-0.04 0.003 0.0389" rpy="0 0 0"/>
+  <parent link="MURLIDAR_v1_1"/>
+  <child link="FONTLIDAR_v1_1"/>
+</joint>
+
+<joint name="Rigid 54" type="fixed">
+  <origin xyz="0.0111 0.0 -0.015" rpy="0 0 0"/>
+  <parent link="MURLIDAR_v1_1"/>
+  <child link="BASELIDAR_v1_1"/>
+</joint>
+
+<joint name="Rigid 55" type="fixed">
+  <origin xyz="-0.0511 0.0459 0.0" rpy="0 0 0"/>
+  <parent link="FONTLIDAR_v1_1"/>
+  <child link="TOITLIDAR_v1_1"/>
+</joint>
+
+<joint name="Rigid 56" type="fixed">
+  <origin xyz="0.0 0.0689 0.025" rpy="0 0 0"/>
+  <parent link="BASELIDAR_v1_1"/>
+  <child link="R325-URG-04LX-UG01_v1_1"/>
+</joint>
+
+<joint name="Revolute 63" type="continuous">
+  <origin xyz="0.04 -0.13 0.0145" rpy="0 0 0"/>
+  <parent link="MOTEUR_RE280_2"/>
+  <child link="ROUE_LEFT_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 64" type="fixed">
+  <origin xyz="0.0 -0.0135 0.0" rpy="0 0 0"/>
+  <parent link="ROUE_LEFT_1"/>
+  <child link="PNEU_LEFT_1"/>
+</joint>
+
+</robot>

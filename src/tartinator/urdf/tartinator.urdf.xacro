@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<robot name="tartinator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Include materials -->
+    <xacro:include filename="$(find tartinator)/urdf/materials.xacro"/>
+
+
+    <!-- Origin of the world -->
+    <link name="world"></link>
+
+    <!-- Link  -->
+    <!-- Base link -->
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_base.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="left_wheel">
+        <visual>
+            <origin xyz="0 0 -0.02005" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_roue_gauche.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.02005" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_roue_gauche.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="right_wheel">
+        <visual>
+            <origin xyz="0 0 -0.02005" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_roue_droite.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.02005" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_roue_droite.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="lidar">
+        <visual>
+            <origin xyz="0 -0.027 0.2919" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_lidar_urg04lx.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find tartinator)/meshes/tartinator_lidar_urg04lx.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Joint -->
+    <!-- Base joint -->
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <joint name="left_wheel_joint" type="continuous">
+        <origin xyz="0 0 0.02005" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="left_wheel"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="right_wheel_joint" type="continuous">
+        <origin xyz="0 0 0.02005" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="right_wheel"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="lidar"/>
+    </joint>
+
+</robot>
